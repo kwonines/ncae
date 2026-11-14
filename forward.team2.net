@@ -1,14 +1,12 @@
-$TTL    86400        ; Default Time To Live (1 day)
-@       IN      SOA   team2.net root (
-                        1 ; Serial number
-                        3600       ; Refresh (1 hour)
-                        1800       ; Retry (30 minutes)
-                        1209600    ; Expire (14 days)
-                        86400      ; Minimum TTL (1 day)
-                    )
+$TTL 86400
+@       IN SOA  ns1.team2.net. root.team2.net. (
+                1       ; Serial
+                3600    ; Refresh
+                1800    ; Retry
+                1209600 ; Expire
+                86400 ) ; Negative cache TTL
 
-; A records for name servers
-@       IN      NS    ns1.team2.net
-ns1     IN      A     192.168.2.12
-www     IN      A     192.168.2.5
-db      IN      A     192.168.2.7
+@       IN NS   ns1.team2.net.
+ns1     IN A    192.168.2.12
+www     IN A    192.168.2.5
+db      IN A    192.168.2.7
