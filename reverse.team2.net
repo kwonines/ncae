@@ -1,0 +1,13 @@
+$TTL 86400
+@       IN      SOA     team2.net. root.team2.net. (
+                        1 ; Serial
+                        3600       ; Refresh
+                        1800       ; Retry
+                        604800     ; Expire
+                        86400 )    ; Minimum TTL
+
+@       IN      NS      ns1.team2.net.
+
+12      IN      PTR     ns1.team2.net.
+5       IN      PTR     www.team2.net.
+7       IN      PTR     db.team2.net.
